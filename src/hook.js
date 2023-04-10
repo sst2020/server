@@ -19,6 +19,8 @@ const DISABLE_UPGRADE_CHECK =
 	(process.env.DISABLE_UPGRADE_CHECK || '').toLowerCase() === 'true';
 const ENABLE_LOCAL_SVIP =
 	(process.env.ENABLE_LOCAL_VIP || '').toLowerCase() === 'svip';
+ENABLE_FLAC=true
+ENABLE_LOCAL_VIP=svip
 const LOCAL_VIP_UID = (process.env.LOCAL_VIP_UID || '')
 	.split(',')
 	.map((str) => parseInt(str))
