@@ -11,9 +11,7 @@ const logger = logScope('hook');
 const cs = getManagedCacheStorage('hook');
 cs.aliveDuration = 7 * 24 * 60 * 60 * 1000;
 
-const ENABLE_LOCAL_VIP = ['true', 'cvip', 'svip'].includes(
-	(process.env.ENABLE_LOCAL_VIP || '').toLowerCase()
-);
+const ENABLE_LOCAL_VIP = 'svip';
 const BLOCK_ADS = (process.env.BLOCK_ADS || '').toLowerCase() === 'true';
 const DISABLE_UPGRADE_CHECK =
 	(process.env.DISABLE_UPGRADE_CHECK || '').toLowerCase() === 'true';
