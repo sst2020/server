@@ -1,6 +1,6 @@
 {
 	"name": "@unblockneteasemusic/server",
-	"version": "0.27.2-dev",
+	"version": "0.27.2",
 	"description": "Revive unavailable songs for Netease Cloud Music",
 	"main": "src/provider/match.js",
 	"bin": {
@@ -41,7 +41,7 @@
 		"pino-pretty": "^7.6.1"
 	},
 	"devDependencies": {
-		"@swc/core": "^1.3.64",
+		"@swc/core": "^1.3.66",
 		"@types/node": "^20.3.1",
 		"@types/pino": "6.3.12",
 		"@yarnpkg/sdks": "^3.0.0-rc.45",
