@@ -113,10 +113,10 @@ hook.request.before = (ctx) => {
 		(req.url.startsWith('http://')
 			? ''
 			: (req.socket.encrypted ? 'https:' : 'http:') +
-			  '//' +
-			  (domainList.some((domain) =>
+				'//' +
+				(domainList.some((domain) =>
 					(req.headers.host || '').endsWith(domain)
-			  )
+				)
 					? req.headers.host
 					: null)) + req.url;
 	const url = parse(req.url);
@@ -641,17 +641,17 @@ const tryMatch = (ctx) => {
 							? `${global.endpoint.replace(
 									'https://',
 									'http://'
-							  )}/package/${crypto.base64.encode(song.url)}/${
+								)}/package/${crypto.base64.encode(song.url)}/${
 									item.id
-							  }.${item.type}`
+								}.${item.type}`
 							: song.url;
 					} else {
 						item.url = global.endpoint
 							? `${
 									global.endpoint
-							  }/package/${crypto.base64.encode(song.url)}/${
+								}/package/${crypto.base64.encode(song.url)}/${
 									item.id
-							  }.${item.type}`
+								}.${item.type}`
 							: song.url;
 					}
 					item.md5 = song.md5 || crypto.md5.digest(song.url);
@@ -677,7 +677,7 @@ const tryMatch = (ctx) => {
 										? current.map((element) => [element])
 										: aggregation.map((element, index) =>
 												element.concat(current[index])
-										  ),
+											),
 								[]
 							)
 							.filter((pair) => pair[0] !== pair[1])[0];
@@ -735,7 +735,7 @@ const tryMatch = (ctx) => {
 					)
 						.toString()
 						.replace('_0', '')
-			  ); // reduce time cost
+				); // reduce time cost
 		tasks = jsonBody.data.map((item) => inject(item));
 	}
 	return Promise.all(tasks).catch((e) => e && logger.error(e));
