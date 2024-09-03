@@ -53,9 +53,7 @@ const search = (info) => {
 				jsonBody.content[1].musicpage.abslist.length < 1
 			)
 				return Promise.reject();
-			const list = jsonBody.content[1].musicpage.abslist
-				.filter((v) => v.tpay /* vip ? */ === '0')
-				.map(format);
+			const list = jsonBody.content[1].musicpage.abslist.map(format);
 			const matched = select(list, info);
 			return matched ? matched.id : Promise.reject();
 		});
@@ -65,7 +63,7 @@ const track = (id) => {
 	const url = crypto.kuwoapi
 		? 'http://mobi.kuwo.cn/mobi.s?f=kuwo&q=' +
 			crypto.kuwoapi.encryptQuery(
-				'corp=kuwo&source=kwplayer_ar_1.1.9_oppo_118980_320.apk&p2p=1&type=convert_url2&sig=0&format=' +
+				'corp=kuwo&source=kwplayer_ar_5.1.0.0_B_jiakong_vh.apk&p2p=1&type=convert_url2&sig=0&format=' +
 					['flac', 'mp3']
 						.slice(select.ENABLE_FLAC ? 0 : 1)
 						.join('|') +
