@@ -9,6 +9,7 @@ const PROVIDERS = {
 	youtubedl: require('./provider/youtube-dl'),
 	ytdlp: require('./provider/yt-dlp'),
 	bilibili: require('./provider/bilibili'),
+	bilivideo: require('./provider/bilivideo'),
 	pyncmd: require('./provider/pyncmd'),
 };
 

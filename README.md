@@ -176,6 +176,7 @@ node app.js -o bilibili ytdlp
 | YouTube（通过 `youtube-dl`) | `youtubedl` |          | 需要自行安装 `youtube-dl`。                                                    |
 | YouTube（通过 `yt-dlp`)     | `ytdlp`     | ✅       | 需要自行安装 `yt-dlp`（`youtube-dl` 仍在活跃维护的 fork）。                    |
 | B 站音乐                    | `bilibili`  |          |                                                                                |
+| B 站音乐                    | `bilivideo` |          | 在大陆地区外的IP地址可能查询不到某些版权视频（如索尼音乐上传的MV等）           |
 | 第三方网易云 API            | `pyncmd`    |          |                                                                                |
 
 - 支持 `pyncmd` 的 API 服务由 GD studio <https://music.gdstudio.xyz> 提供。
