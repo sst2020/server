@@ -39,7 +39,7 @@ const search = (info) => {
 
 	const keyword = encodeURIComponent(info.keyword.replace(' - ', ' '));
 	const url =
-		'http://search.kuwo.cn/r.s?&correct=1&stype=comprehensive&encoding=utf8' +
+		'http://search.kuwo.cn/r.s?&correct=1&vipver=1&stype=comprehensive&encoding=utf8' +
 		'&rformat=json&mobi=1&show_copyright_off=1&searchapi=6&all=' +
 		keyword;
 
@@ -63,7 +63,7 @@ const track = (id) => {
 	const url = crypto.kuwoapi
 		? 'http://mobi.kuwo.cn/mobi.s?f=kuwo&q=' +
 			crypto.kuwoapi.encryptQuery(
-				'corp=kuwo&source=kwplayer_ar_5.1.0.0_B_jiakong_vh.apk&p2p=1&type=convert_url2&sig=0&format=' +
+				'user=0&corp=kuwo&source=kwplayer_ar_5.1.0.0_B_jiakong_vh.apk&p2p=1&type=convert_url2&sig=0&format=' +
 					['flac', 'mp3']
 						.slice(select.ENABLE_FLAC ? 0 : 1)
 						.join('|') +

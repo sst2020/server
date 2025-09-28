@@ -161,6 +161,7 @@ hook.request.before = (ctx) => {
 				if ('x-napm-retry' in req.headers)
 					delete req.headers['x-napm-retry'];
 				req.headers['X-Real-IP'] = '118.88.88.88';
+				if ('x-aeapi' in req.headers) req.headers['x-aeapi'] = 'false';
 				if (
 					req.url.includes('stream') ||
 					req.url.includes('/eapi/cloud/upload/check')
