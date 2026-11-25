@@ -10,9 +10,21 @@ updates:
       directory: '/'
       schedule:
           interval: 'weekly'
+      cooldown:
+          default-days: 7
 
     # Maintain dependencies for npm
     - package-ecosystem: 'npm'
       directory: '/'
       schedule:
           interval: 'weekly'
+      cooldown:
+          default-days: 7
+
+    # Maintain the pinned pkg of the Nix dev shell
+    - package-ecosystem: 'npm'
+      directory: '/nix/pkg'
+      schedule:
+          interval: 'weekly'
+      cooldown:
+          default-days: 7
